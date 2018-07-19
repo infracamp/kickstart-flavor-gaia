@@ -4,8 +4,8 @@ LABEL maintainer="Matthias Leuffen <m@tth.es>"
 ADD / /kickstart
 
 RUN chmod -R 755 /kickstart
-RUN /kickstart/template/base-install-ubuntu.sh
-RUN /kickstart/scripts/build.sh
+RUN /kickstart/flavorkit/template/base-install-ubuntu.sh
+RUN /kickstart/flavorkit/scripts/build.sh
 
 
 ENV TIMEZONE Europe/Berlin
@@ -22,4 +22,4 @@ ENV CONF_DUMMY_VALUE "TEST CONFIG VALUE"
 # Use for debugging:
 #ENTRYPOINT ["/bin/bash"]
 
-ENTRYPOINT ["/kickstart/scripts/start.sh"]
+ENTRYPOINT ["/kickstart/flavorkit/scripts/start.sh"]
