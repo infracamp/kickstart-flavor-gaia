@@ -22,7 +22,7 @@ then
 fi
 
 # Write config file:
-sed "s|%%DIR_PARAMS%%|$APACHE_CONF_DIR_OPTIONS|g" /root/flavor/000-default.conf > /etc/apache2/sites-available/000-default.conf
+sed "s|%%DIR_PARAMS%%|$APACHE_CONF_DIR_OPTIONS|g" /kickstart/flavor/000-default.conf > /etc/apache2/sites-available/000-default.conf
 
 echo "Setting HTTP_PORT to $HTTP_PORT"
 echo "Listen $HTTP_PORT" > /etc/apache2/ports.conf
@@ -50,7 +50,7 @@ else
     echo "assert.exception = 1" >> $iniFile
 
     echo "Activating xdebug..."
-    cp /root/flavor/xdebug.ini $XdebugIniFile
+    cp /kickstart/flavor/xdebug.ini $XdebugIniFile
 fi;
 
 
