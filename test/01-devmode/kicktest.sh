@@ -289,7 +289,7 @@ done
 
 run_container() {
     echo -e $COLOR_GREEN"Loading container '$USE_PIPF_VERSION'..."
-    docker pull "$USE_PIPF_VERSION"
+    #docker pull "$USE_PIPF_VERSION"
 
 	if [ "$KICKSTART_WIN_PATH" != "" ]
 	then
