@@ -6,6 +6,7 @@ ADD / /kickstart
 RUN chmod -R 755 /kickstart
 RUN /kickstart/flavorkit/template/base-install-ubuntu.sh
 RUN /kickstart/flavorkit/scripts/build.sh
+RUN /kickstart/flavor/flavor-build.sh
 
 
 ENV TIMEZONE Europe/Berlin
