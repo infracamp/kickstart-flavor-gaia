@@ -1,7 +1,8 @@
 FROM ubuntu:18.04
 LABEL maintainer="Matthias Leuffen <m@tth.es>"
 
-ADD / /
+ADD / /kickstart
+
 RUN chmod -R 755 /kickstart
 RUN /kickstart/template/base-install-ubuntu.sh
 RUN /kickstart/scripts/build.sh
