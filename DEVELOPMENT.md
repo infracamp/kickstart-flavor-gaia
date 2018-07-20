@@ -6,6 +6,9 @@
 git submodule update --init --recursive --remote
 ```
 
+Do this before you push things. dockerhub will pull exacly the same
+submodules version you have in this repository.
+
 
 ## Dockerhub integration
 
