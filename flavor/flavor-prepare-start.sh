@@ -5,8 +5,6 @@
 echo "[flavor-start.sh] Setting timezone to $TIMEZONE..."
 ln -snf /usr/share/zoneinfo/$TIMEZONE /etc/localtime && echo $TIMEZONE > /etc/timezone
 
-env
-
 if [ "$KICK_APACHE_WWW_ROOT" == "" ]
 then
     KICK_APACHE_WWW_ROOT=/opt/www

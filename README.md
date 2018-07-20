@@ -20,13 +20,9 @@ It is included by Git submodule.
 
 | Key | Default | Description |
 |----------------|----------------|---------------------|
-| `KICK_HTTP_PORT`                  | `80`          | The internal port, apache listens on |
-| `KICK_APACHE_WWW_ROOT`            | `/opt/www`    | The document root |
-| `KICK_APACHE_FALLBACK_RESOURCE`   | `null`        | All requests will be redirected to this script. |
-
-
-
-- `KICK_APACHE_WWW_ROOT`
+| `http_port`                  | `80`          | The internal port, apache listens on |
+| `apache_www_root`            | `/opt/www`    | The document root |
+| `apache_fallback_resource`   | `null`        | All requests will be redirected to this script. |
 
 ## Installed Software
 
