@@ -13,7 +13,8 @@ RUN /kickstart/flavor/flavor-build.sh
 ENV TIMEZONE Europe/Berlin
 ENV KICKSTART_HYPERVISE_HOST="http://kickstart-hypervise/"
 
-ENV HTTP_PORT "4200"
+ENV KICK_HTTP_PORT "80"
+
 ENV DEV_MODE "0"
 ENV DEV_CONTAINER_NAME "unnamed"
 ENV DEV_UID "1000"

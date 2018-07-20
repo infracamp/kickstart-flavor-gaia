@@ -1,15 +1,34 @@
 
-# kickstart - Autoprovisioning Microservice Container (Linux, Windows10, MacOS)
+# kickstart-flavor gaia :: Apache2, PHP7.2 development container
 
 see (http://github.com/infracamp/kickstart) for more information.
 
 Document Index:
 
 - [Development Guide for this flavor](DEVELOPMENT.md)
+- [Dockerhub page](https://hub.docker.com/r/infracamp/kickstart-flavor-gaia/)
+    - [Tags available](https://hub.docker.com/r/infracamp/kickstart-flavor-gaia/tags/)
+    - [Build details](https://hub.docker.com/r/infracamp/kickstart-flavor-gaia/builds/)
 
-
-## What is this project about
+## About this project
 
 This Repo delivers the tools used by any kickstart flavor container.
 It is included by Git submodule.
+
+
+## Container specific `.kick.yml`-directives
+
+| Key | Default | Description |
+|----------------|----------------|---------------------|
+| `KICK_HTTP_PORT`                  | `80`          | The internal port, apache listens on |
+| `KICK_APACHE_WWW_ROOT`            | `/opt/www`    | The document root |
+| `KICK_APACHE_FALLBACK_RESOURCE`   | `null`        | All requests will be redirected to this script. |
+
+
+
+- `KICK_APACHE_WWW_ROOT`
+
+## Installed Software
+
+
 
