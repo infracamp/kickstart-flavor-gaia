@@ -10,11 +10,6 @@ Document Index:
     - [Tags available](https://hub.docker.com/r/infracamp/kickstart-flavor-gaia/tags/)
     - [Build details](https://hub.docker.com/r/infracamp/kickstart-flavor-gaia/builds/)
 
-## About this project
-
-This Repo delivers the tools used by any kickstart flavor container.
-It is included by Git submodule.
-
 
 ## Container specific `.kick.yml`-directives
 
