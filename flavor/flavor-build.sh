@@ -19,8 +19,6 @@ apt-get -y install apache2 libapache2-mod-php7.2 composer php-imagick php7.2-cur
 # Sodium: Rising fatal errors:
 # Removed: php-mcrypt => php-libsodium
 
-rm -R /var/www/html
-# => linking is done in flavor-prepare-start.sh
 
 ##cp /root/flavor/000-default.conf /etc/apache2/sites-available/
 

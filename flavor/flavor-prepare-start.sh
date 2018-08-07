@@ -10,6 +10,7 @@ then
     KICK_APACHE_WWW_ROOT=/opt/www
 fi
 echo "Apache www-root: $KICK_APACHE_WWW_ROOT";
+rm -R /var/www/html
 ln -s $KICK_APACHE_WWW_ROOT /var/www/html
 
 APACHE_CONF_DIR_OPTIONS=""
