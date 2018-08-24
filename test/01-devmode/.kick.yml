@@ -3,3 +3,6 @@
 version: 1
 from: "infracamp/kickstart-flavor-gaia:testing"
 
+command:
+  test_it:
+    - "IT:vim"
