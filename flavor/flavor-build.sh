@@ -13,7 +13,7 @@ apt-get -y install apache2 libapache2-mod-php7.2 composer php-imagick php7.2-cur
                     php7.2-intl \
                     php7.2-sqlite3 php-mongodb php7.2-mysql \
                     phpmd phpcpd iputils-ping telnet npm \
-                    php-zmq php-http
+                    php-zmq php-http php-soap
 
 
 # Sodium: Rising fatal errors:
