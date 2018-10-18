@@ -24,7 +24,11 @@ Document Index:
 
 ### Using XDebug Remote Debug with PhpStorm 
 
+Activate remote debugging in **Settings**:
 
+![Settings](doc/xdebug-config1.png)
+
+(Kickstart will send your hosts ip to the container.)
 
 
 
