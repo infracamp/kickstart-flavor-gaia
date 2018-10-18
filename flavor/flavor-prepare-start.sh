@@ -51,7 +51,7 @@ else
     # Kickstart.sh will provide the fist ip
     echo "xdebug.remote_host = $DOCKER_HOST_IP" >> $iniFile
 
-    echo "Activating xdebug..."
+    echo "Activating xdebug with remote ip: $DOCKER_HOST_IP:9000..."
     cp /kickstart/flavor/xdebug.ini $XdebugIniFile
 fi;
 
