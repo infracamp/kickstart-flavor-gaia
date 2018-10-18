@@ -48,6 +48,9 @@ else
     echo "zend.assertions = 1" >> $iniFile
     echo "assert.exception = 1" >> $iniFile
 
+    # Kickstart.sh will provide the fist ip
+    echo "xdebug.remote_host = $DOCKER_HOST_IP" >> $iniFile
+
     echo "Activating xdebug..."
     cp /kickstart/flavor/xdebug.ini $XdebugIniFile
 fi;
