@@ -58,6 +58,7 @@ else
     cp /kickstart/flavor/xdebug.ini $XdebugIniFile
 
     echo 'export PHP_IDE_CONFIG="serverName=$DEV_CONTAINER_NAME"' >> $bashrc_kickstart
+    echo 'export XDEBUG_CONFIG="idekey=$DEV_CONTAINER_NAME"' >> $bashrc_kickstart
 
     # Kickstart.sh will provide the fist ip
     echo "xdebug.remote_host = $DOCKER_HOST_IP" >> $XdebugIniFile
