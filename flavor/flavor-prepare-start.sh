@@ -32,6 +32,9 @@ phpenmod kickstart-flavor
 
 
 XdebugIniFile="/etc/php/7.2/mods-available/xdebug.ini"
+
+
+
 if [[ "$DEV_MODE" = "0" ]]
 then
     ### PRODUCTION SETTINGS ###
@@ -48,11 +51,15 @@ else
     echo "zend.assertions = 1" >> $iniFile
     echo "assert.exception = 1" >> $iniFile
 
-    # Kickstart.sh will provide the fist ip
-    echo "xdebug.remote_host = $DOCKER_HOST_IP" >> $iniFile
-
     echo "Activating xdebug with remote ip: $DOCKER_HOST_IP:9000..."
     cp /kickstart/flavor/xdebug.ini $XdebugIniFile
+
+    export PHP_IDE_CONFIG="serverName=$DEV_CONTAINER_NAME"
+
+    # Kickstart.sh will provide the fist ip
+    echo "xdebug.remote_host = $DOCKER_HOST_IP" >> $XdebugIniFile
+    echo "xdebug.idekey = '$DEV_CONTAINER_NAME'" >> $XdebugIniFile
+
 fi;
 
 

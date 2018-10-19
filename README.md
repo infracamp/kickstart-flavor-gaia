@@ -30,5 +30,15 @@ Activate remote debugging in **Settings**:
 
 (Kickstart will send your hosts ip to the container.)
 
+**The idekey and serverName is the name of your project!**
 
+
+### Debugging via browser
+
+To start debugging via browser open:
+```
+http://localhost/?XDEBUG_SESSION_START=project123-name
+```
+
+### CLI debugging
 
