@@ -25,5 +25,7 @@ apt-get -y install apache2 libapache2-mod-php7.2 composer php-imagick php7.2-cur
 # Allow access to composer global install scripts
 echo 'export PATH="$PATH:/home/user/.composer/vendor/bin:/opt/vendor/bin"' >> /home/user/.bashrc
 
+touch /home/user/.bashrc.kickstart
+chmod 755 /home/user/.bashrc.kickstart
 
-
+echo ". /home/user/.bashrc.kickstart" >> /home/user/.bashrc

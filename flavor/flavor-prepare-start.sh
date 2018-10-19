@@ -15,6 +15,9 @@ ln -s $KICK_APACHE_WWW_ROOT /var/www/html
 
 APACHE_CONF_DIR_OPTIONS=""
 
+
+
+
 if [ "$KICK_APACHE_FALLBACK_RESOURCE" != "" ]
 then
     APACHE_CONF_DIR_OPTIONS="$APACHE_CONF_DIR_OPTIONS\nFallbackResource $KICK_APACHE_FALLBACK_RESOURCE";
@@ -32,7 +35,7 @@ phpenmod kickstart-flavor
 
 
 XdebugIniFile="/etc/php/7.2/mods-available/xdebug.ini"
-
+bashrc_kickstart="/home/user/.bashrc.kickstart";
 
 
 if [[ "$DEV_MODE" = "0" ]]
@@ -54,7 +57,7 @@ else
     echo "Activating xdebug with remote ip: $DOCKER_HOST_IP:9000..."
     cp /kickstart/flavor/xdebug.ini $XdebugIniFile
 
-    export PHP_IDE_CONFIG="serverName=$DEV_CONTAINER_NAME"
+    echo 'export PHP_IDE_CONFIG="serverName=$DEV_CONTAINER_NAME"' >> $bashrc_kickstart
 
     # Kickstart.sh will provide the fist ip
     echo "xdebug.remote_host = $DOCKER_HOST_IP" >> $XdebugIniFile

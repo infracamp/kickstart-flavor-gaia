@@ -22,23 +22,42 @@ Document Index:
 ## Installed Software
 
 
-### Using XDebug Remote Debug with PhpStorm 
+### Using the xdebug debugger / profiler with PhpStorm
+
+Xdebug is enabled by default if you are in development mode (the project is run by kickstart.sh)
+
+Xdebug is configured to connect the IDE on the `Docker-Host-IP` (which is the first configured IP of your
+host machine - determined by kickstart.sh) on Port `9000`
+
+#### PhpStorm IDE settings (global) 
 
 Activate remote debugging in **Settings**:
 
 ![Settings](doc/xdebug-config1.png)
 
-(Kickstart will send your hosts ip to the container.)
+#### Project settings
+
+![Project-Config](doc/xdebug-project-config1.png)
 
 **The idekey and serverName is the name of your project!**
 
+Enable Path Mappings:
 
-### Debugging via browser
+![Remote-debug-server-config](doc/xdebug-server-config1.png)
+
+
+> **Ensure `serverName`, `idekey` and `configName` is the same of your project name**
+
+
+#### Start Debugging via browser
 
 To start debugging via browser open:
 ```
 http://localhost/?XDEBUG_SESSION_START=project123-name
 ```
 
-### CLI debugging
+#### Start CLI debugging
 
+```
+just set the breakpoint
+```
