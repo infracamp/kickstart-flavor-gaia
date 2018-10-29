@@ -21,6 +21,11 @@ Document Index:
 
 ## Installed Software
 
+Make sure your IDE has plugins installed for:
+
+- **[editorconfig](https://editorconfig.org/#download)** 
+
+
 
 ### Using the xdebug debugger / profiler with PhpStorm
 
@@ -36,6 +41,8 @@ Activate remote debugging in **Settings**:
 ![Settings](doc/xdebug-config1.png)
 
 #### Project settings
+
+Open *Run* > *Edit configurations...*
 
 ![Project-Config](doc/xdebug-project-config1.png)
 
