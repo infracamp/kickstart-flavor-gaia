@@ -75,7 +75,7 @@ just set the breakpoint
 If debugging won't work, use our checklist to determine the cause:
 
 1) Check the docker-host's IP was propagated correctly.
-    - The IP should be set as environment-variable ``
+    - The IP should be set as environment-variable `DOCKER_HOST_IP`
     - Inside the container type `echo $DOCKER_HOST_IP` should print your ip
     
     > A) Check kickstart.sh is the newest version (perform ./kickstart.sh --upgrade)
