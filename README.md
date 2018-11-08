@@ -68,3 +68,28 @@ http://localhost/?XDEBUG_SESSION_START=project123-name
 ```
 just set the breakpoint
 ```
+
+
+#### Troubleshooting the debugging
+
+If debugging won't work, use our checklist to determine the cause:
+
+1) Check the docker-host's IP was propagated correctly.
+    - The IP should be set as environment-variable ``
+    - Inside the container type `echo $DOCKER_HOST_IP` should print your ip
+    
+    > A) Check kickstart.sh is the newest version (perform ./kickstart.sh --upgrade)
+    
+    > B) Solution: Check `hostname -i` returns your primary IP address on your
+    > host machine.
+    
+2) Check the IDE is connectable from within the container on Port `9000` 
+    - Install netcat and try the script below:
+    ```
+    sudo apt install netcat
+    nc -zw3 $DOCKER_HOST_IP 9000 && echo "OK: IDE is reachable on port 9000" || echo "ERROR: IDE unreachable"
+    ```
+    > A) Check if you can reach this PORT from outside the container. If not your IP might be wrong,
+    > or your IDE is not correctly configured.    
+    
+3) Check your IDE-Settings.
