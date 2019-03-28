@@ -7,7 +7,7 @@
 
 set -e
 
-
+apt-get update
 apt-get -y install apache2 libapache2-mod-php7.2 composer php-imagick php7.2-curl  php-redis php-xml php-xdebug \
                     php-zip php-mbstring php-ssh2 php-yaml php-xml php-json php-gd \
                     php7.2-intl \
@@ -23,7 +23,7 @@ apt-get -y install apache2 libapache2-mod-php7.2 composer php-imagick php7.2-cur
 ##cp /root/flavor/000-default.conf /etc/apache2/sites-available/
 
 # Allow access to composer global install scripts
-echo 'export PATH="$PATH:/home/user/.composer/vendor/bin:/opt/vendor/bin"' >> /home/user/.bashrc
+echo 'export PATH="$PATH:/opt/vendor/bin"' >> /home/user/.bashrc
 
 touch /home/user/.bashrc.kickstart
 chmod 755 /home/user/.bashrc.kickstart
