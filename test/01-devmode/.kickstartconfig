@@ -7,4 +7,4 @@ CONTAINER_NAME=flavor-gaia
 OFFLINE_MODE=1
 
 
-#docker build --pull -t $FROM_IMAGE ../../
+docker build --pull -t $FROM_IMAGE ../../
