@@ -1,10 +1,10 @@
 
 # Set the container-name to fix value
-CONTAINER_NAME=flavor-py3
+CONTAINER_NAME=flavor-gaia
 
 
 # Don't pull from the internet
 OFFLINE_MODE=1
 
 
-docker build --pull -t $FROM_IMAGE ../../
+#docker build --pull -t $FROM_IMAGE ../../

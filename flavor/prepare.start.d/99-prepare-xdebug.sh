@@ -11,18 +11,27 @@ echo "Apache www-root: $KICK_APACHE_WWW_ROOT";
 rm -R /var/www/html
 ln -s $KICK_APACHE_WWW_ROOT /var/www/html
 
-APACHE_CONF_DIR_OPTIONS=""
+export APACHE_CONF_DIR_OPTIONS=""
 
+export APACHE_ERROR_LOG="/var/log/apache2/error.log";
 
+if [ "$SYSLOG_HOST" != "" ]
+then
+
+    export APACHE_ERROR_LOG="\"||/usr/bin/logger -d --rfc3164 -n $SYSLOG_HOST -P 4200 -p 2\"";
+fi
 
 
 if [ "$KICK_APACHE_FALLBACK_RESOURCE" != "" ]
 then
-    APACHE_CONF_DIR_OPTIONS="$APACHE_CONF_DIR_OPTIONS\nFallbackResource $KICK_APACHE_FALLBACK_RESOURCE";
+    export APACHE_CONF_DIR_OPTIONS="$APACHE_CONF_DIR_OPTIONS\nFallbackResource $KICK_APACHE_FALLBACK_RESOURCE";
 fi
 
 # Write config file:
-sed "s|%%DIR_PARAMS%%|$APACHE_CONF_DIR_OPTIONS|g" /kickstart/flavor/000-default.conf > /etc/apache2/sites-available/000-default.conf
+envsubst < /kickstart/flavor/000-default.conf > /etc/apache2/sites-available/000-default.conf
+
+
+
 
 echo "Setting HTTP_PORT to $KICK_HTTP_PORT"
 echo "Listen $KICK_HTTP_PORT" > /etc/apache2/ports.conf
