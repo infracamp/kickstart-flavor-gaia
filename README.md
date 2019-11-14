@@ -18,6 +18,7 @@ Document Index:
 | `http_port`                  | `80`          | The internal port, apache listens on |
 | `apache_www_root`            | `/opt/www`    | The document root |
 | `apache_fallback_resource`   | `null`        | All requests will be redirected to this script. |
+| `SYSLOG_HOST`                | ''            | Send apache2 error log to this host             |
 
 ## Installed Software
 
