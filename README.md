@@ -1,5 +1,8 @@
 
 # kickstart-flavor gaia :: Apache2, PHP7.2 development container
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Finfracamp%2Fkickstart-flavor-gaia%2Fbadge&style=flat)](https://github.com/infracamp/kickstart-flavor-gaia/actions)
+[![Latest Stable Version](https://img.shields.io/github/release/infracamp/kickstart-flavor-gaia.svg)](https://github.com/infracamp/kickstart-flavor-gaia/releases)
+[![Docker Pulls](https://img.shields.io/docker/pulls/infracamp/kickstart-flavor-gaia.svg)](https://github.com/infracamp/kickstart-flavor-gaia)
 
 see (http://github.com/infracamp/kickstart) for more information.
 
