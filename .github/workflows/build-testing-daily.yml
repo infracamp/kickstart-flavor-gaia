@@ -21,5 +21,4 @@ jobs:
     - name: run tests
       run: "cd test/01-devmode && ./test.sh"
     - name: Trigger testing run
-      run:
-        - "curl -X POST --data '{\"docker_tag\": \"testing\"}' $DAILY_DOCKERHUB_PULL_URL"
+      run: "curl -X POST --data '{\"docker_tag\": \"testing\"}' $DAILY_DOCKERHUB_PULL_URL"
