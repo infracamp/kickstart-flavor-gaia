@@ -18,7 +18,7 @@ export APACHE_ERROR_LOG="/var/log/apache2/error.log";
 if [ "$SYSLOG_HOST" != "" ]
 then
 
-    export APACHE_ERROR_LOG="\"||/usr/bin/logger -d --rfc3164 -n $SYSLOG_HOST -P 4200 -p 2\"";
+    export APACHE_ERROR_LOG="\"||/usr/bin/logger -d --rfc3164 -n $SYSLOG_HOST -P 4200 -p 2 -t $DEV_CONTAINER_NAME\"";
 fi
 
 
