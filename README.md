@@ -14,6 +14,18 @@ Document Index:
     - [Build details](https://hub.docker.com/r/infracamp/kickstart-flavor-gaia/builds/)
 
 
+## Tags
+
+| Tag         | Version                 |
+|-------------|-------------------------|
+| latest      | 7.2                     |
+| testing     | 7.2                     |
+| experimental| 7.2                     |
+| 7.4-experimental | 7.4                |
+| 7.4-testing      | coming soon        |
+| 7.4-stable       | coming soon        |
+
+
 ## Container specific `.kick.yml`-directives
 
 | Key | Default | Description |

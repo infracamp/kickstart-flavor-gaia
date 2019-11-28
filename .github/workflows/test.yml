@@ -13,7 +13,7 @@ jobs:
         submodules: recursive
 
     - name: Build the container
-      run: "cd test/01-devmode && ./build.sh"
+      run: "cd test && ./build.sh"
     - name: run tests
-      run: "cd test/01-devmode && ./test.sh"
+      run: "cd test && ./test.sh"
  

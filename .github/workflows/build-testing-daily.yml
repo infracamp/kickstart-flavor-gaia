@@ -9,6 +9,9 @@ on:
 jobs:
   build:
 
+    branches:
+      - master
+
     runs-on: ubuntu-latest
 
     steps:
