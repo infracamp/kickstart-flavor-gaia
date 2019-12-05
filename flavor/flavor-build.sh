@@ -10,7 +10,7 @@ sudo apt-get -y install software-properties-common
 
 sudo add-apt-repository ppa:ondrej/php
 apt-get update
-apt-get -y install gettext apache2 libapache2-mod-php7.4 composer php-imagick php7.4-curl  php-redis php-xml php-xdebug \
+apt-get -y install gettext apache2 libapache2-mod-php7.4 composer php-imagick php7.4-curl php7.4-dom php-redis php-xml php-xdebug \
                     php-zip php-mbstring php-ssh2 php-yaml php-xml php-json php-gd \
                     php7.4-intl \
                     php7.4-sqlite3 php-mongodb php7.4-mysql \
