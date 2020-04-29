@@ -3,8 +3,8 @@ name: build-testing-daily
 # Build daily 03:00
 on:
   schedule:
-      # * is a special character in YAML so you have to quote this string
-      - cron:  '0 4 * * *'
+      # * is a special character in YAML so you have to quote this string - Corona: Update only once per week
+      - cron:  '0 4 * * 3'
 
 jobs:
   build:
